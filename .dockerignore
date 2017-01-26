@@ -1,0 +1,7 @@
+.env.dist
+docker-compose.yml
+Dockerfile
+LICENSE.md
+README.md
+Makefile
+.gitignore

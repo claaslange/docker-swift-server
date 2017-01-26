@@ -1,0 +1,15 @@
+version: '2'
+services:
+  server:
+    build:
+      context: .
+      args:
+        SWIFT_ENV: ${SWIFT_ENV}
+    command: ./.build/debug/server
+    tty: true
+    env_file: .env
+    ports:
+    - '${HOST_PORT}:3000' # extern:intern
+    volumes:
+    - .:/app
+    - /app/.build/
